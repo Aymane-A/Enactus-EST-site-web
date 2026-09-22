@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://enactus-tetouan.ma/sitemap.xml
