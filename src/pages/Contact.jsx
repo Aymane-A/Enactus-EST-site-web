@@ -14,7 +14,7 @@ export default function Contact() {
     }
     setErr('')
     const body = `Nom: ${f.nom}\nEmail: ${f.mail}\nFilière: ${f.fil}\n\n${f.mot}`
-    window.location.href = `mailto:${site.email}?subject=${encodeURIComponent('Message Enactus Tétouan')}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(`Message ${site.name}`)}&body=${encodeURIComponent(body)}`
   }
 
   return (
