@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://enactus-tetouan.ma/sitemap.xml
+Sitemap: https://enactus-est-tetouan.enactus.workers.dev/sitemap.xml
