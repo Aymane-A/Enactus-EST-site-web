@@ -32,11 +32,12 @@ export const team = [
   { role: 'Secrétaire général', name: 'Hind EL LAGHMICHE', gender: 'femme', image: null },
   { role: 'Trésorerie', name: 'Aymane KHIAR', gender: 'homme', image: null },
   { role: 'Chef de projet', name: 'Ayoub ZARKOUNI', gender: 'homme', image: null },
-  { role: 'Média', name: '', image: null },
-  { role: 'Designer', name: '', image: null },
-  { role: 'Ressources humaines', name: '', image: null },
-  { role: 'Responsable Événements', name: '', image: null },
-  { role: 'Communication', name: '', image: null },
+  { role: 'Responsable Ressources humaines', name: '', image: null },
+  { role: 'Responsable Communication', name: '', image: null },
+  { role: 'Responsable Événementiel', name: '', image: null },
+  { role: 'Responsable Social Média', name: '', image: null },
+  { role: 'Responsable Design', name: '', image: null },
+  { role: 'éditeur vidéo', name: '', image: null }
 ]
 
 export const news = [
@@ -70,6 +71,16 @@ export const forms = [
     open: true,
     deadline: '',
     endpoint: 'https://formspree.io/f/mqpaqblq',
+    googleFormUrl: '',
+  },
+  {
+    slug: 'membres',
+    kind: 'integration',
+    title: 'Devenir membre',
+    summary: "Rejoindre le club Enactus EST Tétouan en tant que membre.",
+    open: false,
+    deadline: '',
+    endpoint: '',
     googleFormUrl: '',
   },
 ]

@@ -3,22 +3,24 @@ import { site } from '../data.js'
 
 // Poles : une clé stable (indépendante de la langue) + un libellé par langue,
 // pour que la sélection ne se perde pas quand on bascule FR <-> AR.
-const POLE_KEYS = ['media', 'design', 'rh', 'events', 'com', 'unsure']
+const POLE_KEYS = ['rh', 'com', 'events', 'social', 'design', 'video', 'unsure']
 const POLE_LABELS = {
   fr: {
-    media: { name: 'Média', desc: 'Photos, vidéos et contenu visuel pour les réseaux du club.' },
-    design: { name: 'Designer', desc: "Visuels, affiches et identité graphique des projets." },
-    rh: { name: 'Ressources humaines', desc: 'Recrutement, suivi et vie des membres du club.' },
-    events: { name: 'Responsable Événements', desc: 'Organisation et logistique des événements du club.' },
-    com: { name: 'Communication', desc: 'Rédaction et diffusion des messages du club sur les réseaux.' },
+    rh: { name: 'Responsable Ressources humaines', desc: 'Recrutement, suivi et vie des membres du club.' },
+    com: { name: 'Responsable Communication', desc: 'Rédaction et diffusion des messages du club.' },
+    events: { name: 'Responsable Événementiel', desc: 'Organisation et logistique des événements du club.' },
+    social: { name: 'Responsable Social Média', desc: 'Gestion des réseaux sociaux et du contenu du club.' },
+    design: { name: 'Responsable Design', desc: 'Visuels, affiches et identité graphique des projets.' },
+    video: { name: 'Éditeur vidéo', desc: 'Montage des vidéos du club pour les réseaux et les événements.' },
     unsure: { name: 'Je ne sais pas encore', desc: "Pas de souci, on t'aide à trouver ta place." },
   },
   ar: {
-    media: { name: 'الإعلام', desc: 'صور وفيديوهات ومحتوى بصري لشبكات النادي.' },
-    design: { name: 'التصميم', desc: 'تصاميم وملصقات والهوية البصرية للمشاريع.' },
-    rh: { name: 'الموارد البشرية', desc: 'التوظيف ومتابعة حياة أعضاء النادي.' },
+    rh: { name: 'مسؤول الموارد البشرية', desc: 'التوظيف ومتابعة حياة أعضاء النادي.' },
+    com: { name: 'مسؤول التواصل', desc: 'كتابة ونشر رسائل النادي.' },
     events: { name: 'مسؤول الفعاليات', desc: 'تنظيم ولوجستيك فعاليات النادي.' },
-    com: { name: 'التواصل', desc: 'كتابة ونشر رسائل النادي على الشبكات الاجتماعية.' },
+    social: { name: 'مسؤول وسائل التواصل الاجتماعي', desc: 'تسيير شبكات النادي ومحتواها.' },
+    design: { name: 'مسؤول التصميم', desc: 'تصاميم وملصقات والهوية البصرية للمشاريع.' },
+    video: { name: 'مونتير الفيديو', desc: 'مونتاج فيديوهات النادي للشبكات والفعاليات.' },
     unsure: { name: 'لا أعرف بعد', desc: 'لا مشكلة، سنساعدك على إيجاد مكانك.' },
   },
 }
@@ -34,7 +36,8 @@ const T = {
     prenom: 'Prénom', nom: 'Nom', email: 'Email', tel: 'Téléphone ou WhatsApp',
     opt: '(facultatif)', filiere: 'Filière', annee: 'Année', choisir: 'Choisir',
     polesLegend: "Pôles qui t'intéressent", polesHint: '(plusieurs choix possibles)',
-    designerNote: 'Remarque : pour le pôle Designer, il faut une connaissance intermédiaire de Photoshop et de Canva.',
+    designerNote: 'Remarque : pour le pôle Design, il faut une connaissance intermédiaire de Photoshop ou de Canva.',
+    videoNote: "Remarque : pour le pôle Éditeur vidéo, il faut une connaissance intermédiaire des outils de montage (CapCut, DaVinci Resolve, etc.).",
     motivation: 'Pourquoi veux-tu rejoindre Enactus ?',
     competences: 'Quelles sont tes compétences ?',
     experience: 'As-tu déjà une expérience dans ce domaine ?',
@@ -61,6 +64,7 @@ const T = {
     opt: '(اختياري)', filiere: 'الشعبة', annee: 'السنة', choisir: 'اختر',
     polesLegend: 'الأقطاب التي تهمك', polesHint: '(يمكن اختيار أكثر من واحد)',
     designerNote: 'ملاحظة: لقطب التصميم، يجب توفر معرفة متوسطة ببرنامجي Photoshop و Canva.',
+    videoNote: 'ملاحظة: لقطب تحرير الفيديو، يجب توفر معرفة متوسطة بأدوات المونتاج (CapCut، DaVinci Resolve، إلخ).',
     motivation: 'لماذا تريد الانضمام إلى Enactus؟',
     competences: 'ما هي مهاراتك؟',
     experience: 'هل لديك تجربة سابقة في هذا المجال؟',
@@ -211,6 +215,9 @@ export default function IntegrationForm({ form }) {
           {f.poles.includes('design') && (
             <p className="callout">{t.designerNote}</p>
           )}
+          {f.poles.includes('video') && (
+            <p className="callout">{t.videoNote}</p>
+        )}
         </fieldset>
 
         <label htmlFor="motivation">{t.motivation}</label>

@@ -36,6 +36,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://enactus-est-tetouan.enactus.workers.dev/formulaires/membres</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://enactus-est-tetouan.enactus.workers.dev/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
