@@ -40,8 +40,8 @@ export const team = [
 ]
 
 export const news = [
-  { date: '3 décembre 2025', title: 'Assemblée générale du club' },
-  { date: '12 novembre 2025', title: 'Premier événement du club' },
+  { date: '3 décembre 2025', title: 'Premier événement du club' },
+  { date: '12 novembre 2025', title: 'Assemblée générale du club' },
   { date: '7 novembre 2025', title: 'Création du club Enactus EST Tétouan' },
 ]
 
