@@ -109,7 +109,7 @@ export default function About() {
         <div className="wrap">
           <p>Notre chapitre commence ici : <b>construire l'équipe</b>, <b>créer des solutions</b> et laisser une empreinte positive sur la communauté de Tétouan.</p>
           <p className="cap" style={{ marginTop: 20 }}>Enactus EST Tétouan — 2026 · 2027</p>
-          <Link className="btn" to="/formulaires/integration" style={{ marginTop: 32 }}>Rejoindre l'aventure</Link>
+          <Link className="btn" to="/formulaires" style={{ marginTop: 32 }}>Rejoindre l'aventure</Link>
         </div>
       </section>
     </>

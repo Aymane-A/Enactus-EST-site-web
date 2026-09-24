@@ -28,7 +28,7 @@ export default function Home() {
             <Link className="link" to="/formulaires">Rejoindre le club</Link>          
           </div>
           <div className="stage">
-            <Photo src={campus} position="36% 50%" label="Photo du campus à ajouter" alt="Le campus de l'EST Tétouan" />
+            <Photo src={campus} position="36% 50%" label="Photo du campus à ajouter" alt="Le campus de l'EST Tétouan" priority />
             <Bird className={`flyer${seen ? ' done' : ''}`} />
           </div>
         </div>

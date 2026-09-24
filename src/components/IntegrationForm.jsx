@@ -26,14 +26,16 @@ const POLE_LABELS = {
 }
 
 const ANNEES = {
-  fr: ['1ère année', '2ème année', 'Autre'],
-  ar: ['السنة الأولى', 'السنة الثانية', 'أخرى'],
+  fr: ['1ère année', '2ème année', '3ème année', 'Autre'],
+  ar: ['السنة الأولى', 'السنة الثانية', 'السنة الثالثة', 'أخرى'],
 }
 
 const T = {
   fr: {
     langBtn: 'العربية',
-    prenom: 'Prénom', nom: 'Nom', email: 'Email', tel: 'Téléphone ou WhatsApp',
+    prenom: 'Prénom', nom: 'Nom', email: 'Email',
+    emailHint: 'Utilise de préférence ton email institutionnel.',
+    tel: 'Téléphone ou WhatsApp',
     opt: '(facultatif)', filiere: 'Filière', annee: 'Année', choisir: 'Choisir',
     polesLegend: "Pôles qui t'intéressent", polesHint: '(plusieurs choix possibles)',
     designerNote: 'Remarque : pour le pôle Design, il faut une connaissance intermédiaire de Photoshop ou de Canva.',
@@ -60,7 +62,9 @@ const T = {
   },
   ar: {
     langBtn: 'Français',
-    prenom: 'الاسم الشخصي', nom: 'الاسم العائلي', email: 'البريد الإلكتروني', tel: 'الهاتف أو واتساب',
+    prenom: 'الاسم الشخصي', nom: 'الاسم العائلي', email: 'البريد الإلكتروني',
+    emailHint: 'يفضل استعمال بريدك الإلكتروني المؤسساتي.',
+    tel: 'الهاتف أو واتساب',
     opt: '(اختياري)', filiere: 'الشعبة', annee: 'السنة', choisir: 'اختر',
     polesLegend: 'الأقطاب التي تهمك', polesHint: '(يمكن اختيار أكثر من واحد)',
     designerNote: 'ملاحظة: لقطب التصميم، يجب توفر معرفة متوسطة ببرنامجي Photoshop و Canva.',
@@ -185,7 +189,11 @@ export default function IntegrationForm({ form }) {
           <div><label htmlFor="nom">{t.nom}</label><input id="nom" autoComplete="family-name" value={f.nom} onChange={set('nom')} /></div>
         </div>
         <div className="row2">
-          <div><label htmlFor="email">{t.email}</label><input id="email" type="email" autoComplete="email" value={f.email} onChange={set('email')} /></div>
+          <div>
+            <label htmlFor="email">{t.email}</label>
+            <input id="email" type="email" autoComplete="email" value={f.email} onChange={set('email')} />
+            <small className="hint">{t.emailHint}</small>
+          </div>
           <div><label htmlFor="tel">{t.tel} <span className="opt">{t.opt}</span></label><input id="tel" type="tel" autoComplete="tel" value={f.tel} onChange={set('tel')} /></div>
         </div>
         <div className="row2">
