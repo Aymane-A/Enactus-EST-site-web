@@ -13,7 +13,9 @@ import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
 import { forms, site } from './data.js'
 
-const SITE_URL = 'https://enactus-tetouan.ma'
+// Quand le domaine .ma sera acheté, changer uniquement cette ligne
+// (et index.html / public/sitemap.xml / public/robots.txt).
+const SITE_URL = 'https://enactus-est-tetouan.enactus.workers.dev'
 
 const titles = {
   '/': 'Accueil',
@@ -35,9 +37,13 @@ const descriptions = {
   '/contact': "Contactez Enactus Tétouan.",
 }
 
+function normalizePath(pathname) {
+  return pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname
+}
+
 function pageMeta(pathname) {
   if (titles[pathname]) {
-    return { title: titles[pathname], description: descriptions[pathname] }
+    return { title: titles[pathname], description: descriptions[pathname], notFound: false }
   }
   if (pathname.startsWith('/formulaires/')) {
     const slug = pathname.slice('/formulaires/'.length)
@@ -45,9 +51,10 @@ function pageMeta(pathname) {
     return {
       title: form?.title ?? 'Formulaire',
       description: form ? `${form.title} — formulaire Enactus Tétouan.` : "Formulaire Enactus Tétouan.",
+      notFound: !form,
     }
   }
-  return { title: 'Page introuvable', description: "Cette page n'existe pas sur Enactus Tétouan." }
+  return { title: 'Page introuvable', description: "Cette page n'existe pas sur Enactus Tétouan.", notFound: true }
 }
 
 function setMeta(selector, attr, value) {
@@ -59,13 +66,15 @@ export default function App() {
   const location = useLocation()
 
   useEffect(() => {
-    const { title, description } = pageMeta(location.pathname)
+    const path = normalizePath(location.pathname)
+    const { title, description, notFound } = pageMeta(path)
     const fullTitle = `${title} | ${site.name}`
-    const url = `${SITE_URL}${location.pathname}`
+    const url = `${SITE_URL}${path === '/' ? '/' : path}`
 
     document.title = fullTitle
     setMeta('meta[name="description"]', 'content', description)
     setMeta('link[rel="canonical"]', 'href', url)
+    setMeta('meta[name="robots"]', 'content', notFound ? 'noindex, follow' : 'index, follow')
     setMeta('meta[property="og:title"]', 'content', fullTitle)
     setMeta('meta[property="og:description"]', 'content', description)
     setMeta('meta[property="og:url"]', 'content', url)
