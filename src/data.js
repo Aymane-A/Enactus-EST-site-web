@@ -32,10 +32,10 @@ export const team = [
   { role: 'Secrétaire général', name: 'Hind EL LAGHMICHE', gender: 'femme', image: null },
   { role: 'Trésorerie', name: 'Aymane KHIAR', gender: 'homme', image: null },
   { role: 'Chef de projet', name: 'Ayoub ZARKOUNI', gender: 'homme', image: null },
-  { role: 'Responsable Ressources humaines', name: '', image: null },
-  { role: 'Responsable Événementiel', name: '', image: null },
-  { role: 'Responsable Social Média et Communication', name: '', gender: 'homme', image: null },
-  { role: 'Responsable Visuel', name: '', gender: 'homme', image: null },
+  { role: 'Responsable Ressources humaines', name: 'Hajar ELHATIME', gender: 'femme', image: null },
+  { role: 'Responsable Événementiel', name: 'Fatima Zahrae KADDOUR', gender: 'femme', image: null },
+  { role: 'Responsable Social Média et Communication', name: 'Sayf Eddine DAOUDI', gender: 'homme', image: null },
+  { role: 'Responsable Visuel', name: 'Issam FITIAN', gender: 'homme', image: null },
 ]
 
 export const news = [
