@@ -9,6 +9,7 @@ import Team from './pages/Team.jsx'
 import News from './pages/News.jsx'
 import Forms from './pages/Forms.jsx'
 import FormDetail from './pages/FormDetail.jsx'
+import Links from './pages/Links.jsx'
 import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
 import { forms, site } from './data.js'
@@ -24,6 +25,7 @@ const titles = {
   '/equipe': 'Équipe',
   '/actualites': 'Actualités',
   '/formulaires': 'Formulaires',
+  '/liens': 'Liens',
   '/contact': 'Contact',
 }
 
@@ -34,6 +36,7 @@ const descriptions = {
   '/equipe': "L'équipe étudiante qui anime Enactus Tétouan.",
   '/actualites': "Actualités, événements et réalisations d'Enactus Tétouan.",
   '/formulaires': "Formulaires d'adhésion et de participation aux activités d'Enactus Tétouan.",
+  '/liens': "Tous les liens utiles d'Enactus Tétouan : réseaux sociaux, formulaires et contact.",
   '/contact': "Contactez Enactus Tétouan.",
 }
 
@@ -111,6 +114,7 @@ export default function App() {
             <Route path="/actualites" element={<News />} />
             <Route path="/formulaires" element={<Forms />} />
             <Route path="/formulaires/:slug" element={<FormDetail />} />
+            <Route path="/liens" element={<Links />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

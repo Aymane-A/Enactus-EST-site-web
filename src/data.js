@@ -33,11 +33,9 @@ export const team = [
   { role: 'Trésorerie', name: 'Aymane KHIAR', gender: 'homme', image: null },
   { role: 'Chef de projet', name: 'Ayoub ZARKOUNI', gender: 'homme', image: null },
   { role: 'Responsable Ressources humaines', name: '', image: null },
-  { role: 'Responsable Communication', name: '', image: null },
   { role: 'Responsable Événementiel', name: '', image: null },
-  { role: 'Responsable Social Média', name: '', image: null },
-  { role: 'Responsable Design', name: '', image: null },
-  { role: 'éditeur vidéo', name: '', image: null }
+  { role: 'Responsable Social Média et Communication', name: '', gender: 'homme', image: null },
+  { role: 'Responsable Visuel', name: '', gender: 'homme', image: null },
 ]
 
 export const news = [
@@ -68,7 +66,7 @@ export const forms = [
     kind: 'integration',
     title: 'Postuler pour le bureau exécutif',
     summary: "Candidater pour intégrer le club Enactus EST Tétouan.",
-    open: true,
+    open: false,
     deadline: '',
     endpoint: 'https://formspree.io/f/mqpaqblq',
     googleFormUrl: '',
