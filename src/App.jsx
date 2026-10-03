@@ -13,6 +13,7 @@ import Links from './pages/Links.jsx'
 import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
 import { forms, site } from './data.js'
+import { Analytics } from '@vercel/analytics/react'
 
 // Quand le domaine .ma sera acheté, changer uniquement cette ligne
 // (et index.html / public/sitemap.xml / public/robots.txt).
@@ -121,6 +122,7 @@ export default function App() {
         </div>
       </main>
       <Footer />
+      <Analytics />
     </>
   )
 }
