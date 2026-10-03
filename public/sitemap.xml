@@ -1,52 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://enactus-est-tetouan.enactus.workers.dev/</loc>
+    <loc>https://enactus-est-site-web.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://enactus-est-tetouan.enactus.workers.dev/a-propos</loc>
+    <loc>https://enactus-est-site-web.vercel.app/a-propos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://enactus-est-tetouan.enactus.workers.dev/projets</loc>
+    <loc>https://enactus-est-site-web.vercel.app/projets</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://enactus-est-tetouan.enactus.workers.dev/equipe</loc>
+    <loc>https://enactus-est-site-web.vercel.app/equipe</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://enactus-est-tetouan.enactus.workers.dev/actualites</loc>
+    <loc>https://enactus-est-site-web.vercel.app/actualites</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://enactus-est-tetouan.enactus.workers.dev/formulaires</loc>
+    <loc>https://enactus-est-site-web.vercel.app/formulaires</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://enactus-est-tetouan.enactus.workers.dev/formulaires/integration</loc>
+    <loc>https://enactus-est-site-web.vercel.app/formulaires/integration</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://enactus-est-tetouan.enactus.workers.dev/formulaires/membres</loc>
+    <loc>https://enactus-est-site-web.vercel.app/formulaires/membres</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://enactus-est-tetouan.enactus.workers.dev/liens</loc>
+    <loc>https://enactus-est-site-web.vercel.app/liens</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://enactus-est-tetouan.enactus.workers.dev/contact</loc>
+    <loc>https://enactus-est-site-web.vercel.app/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

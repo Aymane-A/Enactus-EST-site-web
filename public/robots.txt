@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://enactus-est-tetouan.enactus.workers.dev/sitemap.xml
+Sitemap: https://enactus-est-site-web.vercel.app/sitemap.xml

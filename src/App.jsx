@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+﻿import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
@@ -16,7 +16,7 @@ import { forms, site } from './data.js'
 
 // Quand le domaine .ma sera acheté, changer uniquement cette ligne
 // (et index.html / public/sitemap.xml / public/robots.txt).
-const SITE_URL = 'https://enactus-est-tetouan.enactus.workers.dev'
+const SITE_URL = 'https://enactus-est-site-web.vercel.app'
 
 const titles = {
   '/': 'Accueil',
