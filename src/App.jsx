@@ -18,7 +18,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react'
 
 // Quand le domaine .ma sera acheté, changer uniquement cette ligne
 // (et index.html / public/sitemap.xml / public/robots.txt).
-const SITE_URL = 'https://enactus-est-site-web.vercel.app'
+const SITE_URL = 'https://enactus.estt.ma'
 
 const titles = {
   '/': 'Accueil',
